@@ -176,7 +176,7 @@ mod tests {
     #![allow(clippy::undocumented_unsafe_blocks)]
     use std::{process, thread};
 
-    use libc::syscall;
+    use c::syscall;
     use seccompiler::sock_filter;
 
     use super::*;

@@ -3,6 +3,7 @@
 
 //! Enables pre-boot setup, instantiation and booting of a Firecracker VMM.
 
+
 #[cfg(target_arch = "x86_64")]
 use std::convert::TryFrom;
 use std::fmt::Debug;
@@ -71,7 +72,9 @@ use crate::vmm_config::machine_config::{VmConfig, VmConfigError};
 use crate::vstate::memory::{GuestAddress, GuestMemory, GuestMemoryExtension, GuestMemoryMmap};
 use crate::vstate::vcpu::{Vcpu, VcpuConfig, VcpuError};
 use crate::vstate::vm::Vm;
-use crate::{device_manager, EventManager, Vmm, VmmError};
+// use crate::{device_manager, EventManager, Vmm, VmmError};
+use crate::{device_manager, EventManager, VmmError};
+use crate::vmm_helper::Vmm;
 
 /// Errors associated with starting the instance.
 #[derive(Debug, thiserror::Error, displaydoc::Display)]

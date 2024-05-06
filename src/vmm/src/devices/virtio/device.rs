@@ -239,7 +239,7 @@ pub(crate) mod tests {
 
     impl VirtioDevice for MockVirtioDevice {
         fn avail_features(&self) -> u64 {
-            !()
+            todo!()
         }
 
         fn acked_features(&self) -> u64 {
